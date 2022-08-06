@@ -39,7 +39,15 @@
             </div>
         </nav>
         </header>
-        @yield('content')
-
+        <main>
+            <div class="container-fluid">
+                @if(session('msg'))
+                <p class="msg">{{session('msg')}}</p>
+                @endif
+                <div class="row">
+                @yield('content')
+                </div>
+            </div>
+        </main>
     </body>
 </html>
