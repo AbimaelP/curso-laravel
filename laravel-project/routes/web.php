@@ -16,11 +16,7 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
 Route::get('/events/create', [EventController::class, 'create']);
-
-Route::get('/running_file', function () {
-    return view('running_file');
-});
-
-Route::get('/voltar', function () {
-    return view('link_volta');
+Route::post('/events',[EventController::class, 'store']);
+Route::get('/contact', function () {
+    return view('contact');
 });
